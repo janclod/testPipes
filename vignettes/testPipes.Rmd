@@ -35,11 +35,15 @@ This package contains two R scripts (function1.R and function2.R).
 function1 returns the output of x
 
 ```{r}
-function1(201989)
+df1 <- data.frame(col1 = c(1,NA,2), col2 = c(3,NA,4))
+print(df1)
+function1(df1)
 ```
 
 function2 also returns the output of y
 
 ```{r}
-function2("example")
+df2 <- data.frame(col1 = c(23,24), col2 = c(25,NA))
+print(df2)
+function2(df2)
 ```
