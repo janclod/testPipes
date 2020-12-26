@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' function1(data.frame(col1 = c(1,2), col2 = c(3,4)))
+#' function1(data.frame(col1 = c(1, 2), col2 = c(3, 4)))
 function1 <- function(x) {
   c1 <- as.numeric(x$col1)
   c2 <- as.numeric(x$col2)

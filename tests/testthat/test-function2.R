@@ -1,5 +1,5 @@
 test_that("use function2", {
-  df <- data.frame(col1 = c("1",NA,3), col2 = c("1",NA,"45"))
+  df <- data.frame(col1 = c("1", NA, 3), col2 = c("1", NA, "45"))
   out <- function2(df)
   expect_true("col1" %in% names(out))
   expect_true("col2" %in% names(out))
