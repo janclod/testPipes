@@ -9,12 +9,9 @@ function1(x)
 \arguments{
 \item{x}{string input}
 }
-\value{
-
-}
 \description{
 Print the input
 }
 \examples{
-print("Claudio")
+function1("Claudio")
 }

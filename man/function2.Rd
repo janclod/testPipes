@@ -9,12 +9,9 @@ function2(y)
 \arguments{
 \item{y}{input y}
 }
-\value{
-
-}
 \description{
 Show output for y
 }
 \examples{
-/code{function2("another input")}
+function2("another input")
 }
