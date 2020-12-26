@@ -2,3 +2,4 @@
 
 export(function1)
 export(function2)
+importFrom(magrittr,"%>%")
