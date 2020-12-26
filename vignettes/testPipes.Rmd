@@ -32,7 +32,7 @@ to build on macOS and Ubuntu when pipes are used in more than one single file.
 
 This package contains two R scripts (function1.R and function2.R).
 
-function1 returns the output of x
+function1 cleans the dataframe given as input
 
 ```{r}
 df1 <- data.frame(col1 = c(1,NA,2), col2 = c(3,NA,4))
@@ -40,10 +40,18 @@ print(df1)
 function1(df1)
 ```
 
-function2 also returns the output of y
+function2 also cleans the dataframe given as input
 
 ```{r}
 df2 <- data.frame(col1 = c(23,24), col2 = c(25,NA))
 print(df2)
 function2(df2)
 ```
+
+
+## ERROR
+
+Pipes will be introduced into one file (function1.R) on branch pipe1file and
+into two files (function1.R and function2.R) on branch pipe2files.
+
+We expect that 
