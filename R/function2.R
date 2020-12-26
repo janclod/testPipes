@@ -5,7 +5,9 @@
 #' @export
 #'
 #' @examples
-#' function2(df)
+#' function2(data.frame(col1 = c(1,2), col2 = c(3,4)))
 function2 <- function(y) {
-  na.omit(data.frame(col1 = as.numeric(y$col1), col2 = as.numeric(y$col2)))
+  c1 <- as.numeric(y$col1)
+  c2 <- as.numeric(y$col2)
+  stats::na.omit(data.frame(col1 = c1, col2 = c2))
 }
