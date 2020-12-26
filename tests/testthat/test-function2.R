@@ -1,4 +1,10 @@
-test_that("output y", {
-  out <- function2(9)
-  expect_equal(out, "This is y: 9")
+test_that("use function2", {
+  df <- data.frame(col1 = c("1",NA,3), col2 = c("1",NA,"45"))
+  out <- function2(df)
+  expect_true("col1" %in% names(out))
+  expect_true("col2" %in% names(out))
+  expect_false(all(is.na(out$col1)))
+  expect_false(all(is.na(out$col2)))
+  expect_true(is.numeric(out$col1))
+  expect_true(is.numeric(out$col2))
 })

@@ -1,13 +1,13 @@
 #' Function1
 #'
-#' Print the input
+#' Clean data frame
 #'
-#' @param x string input
+#' @param x input data frame
 #'
 #' @export
 #'
 #' @examples
-#' function1("Claudio")
+#' function1(data.frame(col1 = c(1,2), col2 = c(3,4)))
 function1 <- function(x) {
-  return(paste0("This is x: ", x))
+  na.omit(data.frame(col1 = as.numeric(x$col1), col2 = as.numeric(x$col2)))
 }

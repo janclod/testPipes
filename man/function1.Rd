@@ -7,11 +7,11 @@
 function1(x)
 }
 \arguments{
-\item{x}{string input}
+\item{x}{input data frame}
 }
 \description{
-Print the input
+Clean data frame
 }
 \examples{
-function1("Claudio")
+function1(data.frame(col1 = c(1,2), col2 = c(3,4)))
 }

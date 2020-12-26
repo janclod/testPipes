@@ -13,5 +13,5 @@ function2(y)
 Show output for y
 }
 \examples{
-function2("another input")
+function2(df)
 }

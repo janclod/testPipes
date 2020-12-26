@@ -5,7 +5,7 @@
 #' @export
 #'
 #' @examples
-#' function2("another input")
+#' function2(df)
 function2 <- function(y) {
-  return(paste0("This is y: ", y))
+  na.omit(data.frame(col1 = as.numeric(y$col1), col2 = as.numeric(y$col2)))
 }
