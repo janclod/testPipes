@@ -11,8 +11,8 @@ to build on macOS and Ubuntu ~~when pipes are used in more than one single file~
 when pipes do not start on a new line.
 
 
-On GHA, `lintr::expect_lint_free()` throws the following error:
-Warning: no visible global function definition for ‘%>%’
+On GHA, `lintr::expect_lint_free()` throws the following error:  
+```Warning: no visible global function definition for ‘%>%’```
 
 See [this](https://github.com/jimhester/lintr/blob/master/R/pipe_continuation_linter.R)
 for more info about the lint related to pipes.
