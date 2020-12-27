@@ -2,8 +2,9 @@
 # https://community.rstudio.com/new-topic?category=Package%20development&tags=github-actions
 on:
   push:
-    - pipe1file
-    - pipe2files
+    branches:
+      - pipe1file
+      - pipe2files
 
 name: R-CMD-check
 
