@@ -17,14 +17,14 @@ On GHA, `lintr::expect_lint_free()` throws the following error:
 See [this](https://github.com/jimhester/lintr/blob/master/R/pipe_continuation_linter.R)
 for more info about the lint related to pipes.
 
-### examples of [bad code]() according to lintr
+### examples of [bad code](https://github.com/janclod/testPipes/tree/bad_pipe) according to lintr
 Example of code that breaks on GHA:
 ```
 data.frame(col1 = c1, col2 = c2) %>% stats::na.omit()
 ```
 Everything on one line: lintr does not like this!
 
-### examples of [good code]() according to lintr 
+### examples of [good code](https://github.com/janclod/testPipes/tree/good_pipe) according to lintr 
 Example of code that builds without erros on GHA:
 ```
 data.frame(col1 = c1,
