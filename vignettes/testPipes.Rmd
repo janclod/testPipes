@@ -46,3 +46,8 @@ Two branches (good_pipe and bad_pipe) show the correct and incorrect usage of
 pipes according to lintr.
 
 However the error message is misleading. Why?
+
+```
+Error: Error: Not lint free
+Warning: no visible global function definition for ‘%>%’
+```
