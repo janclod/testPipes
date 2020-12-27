@@ -31,3 +31,7 @@ data.frame(col1 = c1,
           col2 = c2) %>% stats::na.omit()
 ```
 Each pipe is on a new line: lintr likes this! <3
+
+### question
+Is the warning
+```Warning: no visible global function definition for ‘%>%’``` misleading?
