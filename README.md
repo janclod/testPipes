@@ -14,9 +14,6 @@ when pipes do not start on a new line.
 On GHA, `lintr::expect_lint_free()` throws the following error:  
 ```Warning: no visible global function definition for ‘%>%’```
 
-See [this](https://github.com/jimhester/lintr/blob/master/R/pipe_continuation_linter.R)
-for more info about the lint related to pipes.
-
 ### examples of [bad code](https://github.com/janclod/testPipes/tree/bad_pipe) according to lintr
 Example of code that breaks on GHA:
 ```
@@ -32,6 +29,7 @@ data.frame(col1 = c1,
 ```
 Each pipe is on a new line: lintr likes this! <3
 
-### question
-Is the warning
-```Warning: no visible global function definition for ‘%>%’``` misleading?
+### linter analysis
+After some digging, it seems that the ```object_usage_linter``` is responsible for
+breaking the code. This linter harnesses the [codetools package](https://cran.r-project.org/package=codetools).
+This linter calls ```codetools::checkUsage```
