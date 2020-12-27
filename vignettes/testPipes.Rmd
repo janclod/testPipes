@@ -26,11 +26,11 @@ when using pipes (%>%).
 
 In short,
 GHA [fails](https://github.com/informalr/informalr/actions/runs/442815899)
-to build on macOS and Ubuntu when pipes are used in more than one single file.
+to build on macOS and Ubuntu when pipes are used on a single line.
 
-## TWO SEPARATE R FILES
+## MOCK R FILE
 
-This package contains two R scripts (function1.R and function2.R).
+This package contains one R scripts (function1.R).
 
 function1 cleans the dataframe given as input
 
@@ -40,18 +40,9 @@ print(df1)
 function1(df1)
 ```
 
-function2 also cleans the dataframe given as input
-
-```{r}
-df2 <- data.frame(col1 = c(23,24), col2 = c(25,NA))
-print(df2)
-function2(df2)
-```
-
-
 ## ERROR
 
-Pipes will be introduced into one file (function1.R) on branch pipe1file and
-into two files (function1.R and function2.R) on branch pipe2files.
+Two branches (good_pipe and bad_pipe) show the correct and incorrect usage of
+pipes according to lintr.
 
-We expect that 
+However the error message is misleading. Why?
