@@ -32,4 +32,4 @@ Each pipe is on a new line: lintr likes this! <3
 ### linter analysis
 After some digging, it seems that the ```object_usage_linter``` is responsible for
 breaking the code. This linter harnesses the [codetools package](https://cran.r-project.org/package=codetools).
-This linter calls ```codetools::checkUsage```
+This linter calls ```codetools::checkUsage``` on closures.
