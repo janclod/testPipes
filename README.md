@@ -1,3 +1,6 @@
+Is this a bug? Or am I missing somthing about GHA?
+All branches build with not errors locally.
+
 ### testPipes
 
 This package simply aims to reproduce an error encountered while working
