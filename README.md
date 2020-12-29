@@ -1,5 +1,14 @@
-Is this a bug? Or am I missing somthing about GHA?
-All branches build with no errors locally.
+### BUG: NO
+### HOWTO
+Remember to install the package that you are testing by running
+```R CMD INSTALL .``` on Linux and macOS systems.
+
+Add this to your yaml file
+```
+- name: Install package
+if: runner.os == 'macOS' || runner.os == 'Linux'
+run: R CMD INSTALL .
+```
 
 ### testPipes
 
