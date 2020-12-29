@@ -9,10 +9,10 @@ when pipes do not start on a new line.
 No errors locally (Linux).
 ### IS THIS A BUG? NO
 ### BRIEF SOLUTION TO THE ISSUE
-Remember to install the package that you are testing by running
+On GHA, remember to install the package that you are testing by running
 ```R CMD INSTALL .``` on Linux and macOS systems.
 
-When using GHA, add this to your yaml file after 'Installing dependencies'
+Add this to your yaml file after 'Installing dependencies'
 ```
 - name: Install package
 if: runner.os == 'macOS' || runner.os == 'Linux'
