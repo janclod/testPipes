@@ -1,5 +1,5 @@
 Is this a bug? Or am I missing somthing about GHA?
-All branches build with not errors locally.
+All branches build with no errors locally.
 
 ### testPipes
 
