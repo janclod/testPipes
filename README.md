@@ -31,4 +31,10 @@ Each pipe is on a new line: lintr likes this! <3
 ### linter analysis
 After some digging, it seems that the ```object_usage_linter``` is responsible for
 breaking the code. This linter harnesses the [codetools package](https://cran.r-project.org/package=codetools).
-This linter calls ```codetools::checkUsage``` on closures (e.g.: ```data.frame(col1 = c1, col2 = c2) %>% stats::na.omit()```).
+This linter calls ```codetools::checkUsage``` on closures.
+In this specific case, this will look something like this:
+```codetools::checkUsage(function1 <- function(x) {
+  c1 <- as.numeric(x$col1)
+  c2 <- as.numeric(x$col2)
+  data.frame(col1 = c1, col2 = c2) %>% stats::na.omit()
+}```).
