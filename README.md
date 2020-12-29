@@ -10,7 +10,6 @@ GHA [fails](https://github.com/informalr/informalr/actions/runs/442815899)
 to build on macOS and Ubuntu ~~when pipes are used in more than one single file~~
 when pipes do not start on a new line.
 
-
 On GHA, `lintr::expect_lint_free()` throws the following error:  
 ```Warning: no visible global function definition for ‘%>%’```
 
@@ -32,4 +31,4 @@ Each pipe is on a new line: lintr likes this! <3
 ### linter analysis
 After some digging, it seems that the ```object_usage_linter``` is responsible for
 breaking the code. This linter harnesses the [codetools package](https://cran.r-project.org/package=codetools).
-This linter calls ```codetools::checkUsage``` on closures.
+This linter calls ```codetools::checkUsage``` on closures (e.g.: ```data.frame(col1 = c1, col2 = c2) %>% stats::na.omit()```).
