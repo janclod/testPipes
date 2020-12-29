@@ -3,12 +3,13 @@ In short,
 GHA [fails](https://github.com/informalr/informalr/actions/runs/442815899)
 to build on macOS and Ubuntu ~~when pipes are used in more than one single file~~
 when pipes do not start on a new line.
+No errors locally (Linux).
 ### IS THIS A BUG? NO
 ### BRIEF SOLUTION TO THE ISSUE
 Remember to install the package that you are testing by running
 ```R CMD INSTALL .``` on Linux and macOS systems.
 
-Add this to your yaml file
+When using GHA, add this to your yaml file after 'Installing dependencies'
 ```
 - name: Install package
 if: runner.os == 'macOS' || runner.os == 'Linux'
